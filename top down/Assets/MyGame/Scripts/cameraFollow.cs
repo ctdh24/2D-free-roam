@@ -7,7 +7,7 @@ public class cameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         yPos = player.transform.position.y + 0.3f;
-        transform.position = new Vector3(player.transform.position.x, yPos, player.transform.position.z - 1.0f);
+        transform.position = new Vector3(player.transform.position.x, yPos, player.transform.position.z - 0.8f);
     }
 	
 	// Update is called once per frame
