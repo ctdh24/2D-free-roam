@@ -11,6 +11,7 @@ public class playerControl : MonoBehaviour {
 
     public Transform[] shotEmitter;
     public GameObject bullet;
+    public float maneuverSpeed;
     public float speed;
     public float tilt;
     public Bounds bounds;
@@ -32,9 +33,10 @@ public class playerControl : MonoBehaviour {
     //movement here
     void FixedUpdate()
     {
+        
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        GetComponent<Rigidbody>().velocity = new Vector3(moveHorizontal*speed, 0.0f, 5.0f);
+        GetComponent<Rigidbody>().velocity = new Vector3(moveHorizontal*maneuverSpeed, 0.0f, speed);
 
         GetComponent<Rigidbody>().position = new Vector3
         (
